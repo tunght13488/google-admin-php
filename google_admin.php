@@ -12,6 +12,7 @@ $applicationName = 'App Name';
 $keyFile = PATH . DS . 'local' . DS . 'private-key.p12';
 $privateKeyPassword = 'notasecret';
 $scopes = array('https://www.googleapis.com/auth/admin.directory.user');
+$adminUsername = 'admin@smartosc.com';
 
 // To find and update
 $username = 'tunght2@smartosc.com';
@@ -24,7 +25,7 @@ $credentials = new Google_Auth_AssertionCredentials(
     $key,
     $privateKeyPassword,
     'http://oauth.net/grant_type/jwt/1.0/bearer',
-    'admin@smartosc.com'
+    $adminUsername
 );
 
 $client = new Google_Client();
